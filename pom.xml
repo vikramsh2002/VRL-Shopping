@@ -17,11 +17,15 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		<!--  Source folder ko run krne ke liye dependency -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
+
+
+		<!-- Test folder ko run depency   -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -30,23 +34,43 @@
 
 
 
-		<!-- Adding tomcat   -->
-		<dependency>
+		<!-- **********************************************************************
+		|				Mongo DB Config 										|
+		 *************************************************************************
+		 Connect the mongo db to my spring boot app
+		 1. Spring Boot Mongo db data starter :  Start mongo and common operations
+		 2. Spring boot mongo do java connector: Connect to it
+         *****************************************************************************
+		 -->
 
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
-		<dependency>   <groupId>org.mongodb</groupId>
-			<artifactId>mongo-java-driver</artifactId>
-			<version>3.12.11</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 			<version>3.0.2</version>
 		</dependency>
+
+
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.12.11</version>
+		</dependency>
+
+		<!-- **********************************************************************
+		|        TomCAT Configuration 											|
+		*****************************************************************************
+		Host the java code using tomcat server needed
+```		Apache Server hoster
+		********************************************* ****************************-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 
 
 		<!-- Automatic create getter and setter  -->
@@ -57,6 +81,23 @@
 			<scope>provided</scope>
 
 		</dependency>
+
+
+		<!-- JSP SPRING TAGS -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework</groupId>-->
+<!--			<artifactId>spring-webmvc</artifactId>-->
+<!--			<version>6.0.4</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>javax.servlet</groupId>-->
+<!--			<artifactId>jstl</artifactId>-->
+<!--			<version>1.2</version>-->
+<!--		</dependency>-->
+
+
 
 	</dependencies>
 

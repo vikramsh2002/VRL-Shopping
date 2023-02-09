@@ -1,13 +1,10 @@
-package vrl.VRL_EShopping.Model;
+package vrl.VRL_EShopping.Model.Products;
 
-import org.springframework.data.annotation.Id;
+import lombok.Data;
 
 import java.util.HashMap;
 
-public class Product {
-    @Id
-    private int productId;
-
+public @Data class ProdData {
     private String productName;
     private double productPrice;
     private HashMap<Integer,String> review;
@@ -16,6 +13,7 @@ public class Product {
     private String category;
     private double discount;
     private boolean outOfStock;
+
 
 
 

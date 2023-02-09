@@ -1,12 +1,13 @@
 package vrl.VRL_EShopping.Service.Interfaces;
-import vrl.VRL_EShopping.Model.Product;
+import vrl.VRL_EShopping.Model.Products.ProdData;
+import vrl.VRL_EShopping.Model.Products.Product;
 
 import java.util.HashMap;
 import java.util.List;
 public interface ProductService {
     // Product
-    Product addProduct(Product p1);
-    List<Product> addProducts(List<Product>prods);
+    Product addProduct(ProdData p1);
+    List<Product> addProducts(List<ProdData>prods);
 
 
     // Product Fetching

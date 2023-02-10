@@ -1,18 +1,21 @@
 package vrl.VRL_EShopping.Service.Interfaces;
-import vrl.VRL_EShopping.Model.Products.ProdData;
-import vrl.VRL_EShopping.Model.Products.Product;
+
+
+
+import vrl.VRL_EShopping.Model.Products.ProductData;
+import vrl.VRL_EShopping.Model.Products.UniqueProd;
 
 import java.util.HashMap;
 import java.util.List;
 public interface ProductService {
     // Product
-    Product addProduct(ProdData p1);
-    List<Product> addProducts(List<ProdData>prods);
+    ProductData addProduct(ProductData p1);
+    List<ProductData> addProducts(List<ProductData>prods);
 
 
     // Product Fetching
     List<ProductService> getAllProductList();
-    List<ProductService> searchProductById(int pid);
+    ProductData searchProductById(UniqueProd id);
     List<ProductService> searchProductByPrice(String productname, double price);
 
     // Update

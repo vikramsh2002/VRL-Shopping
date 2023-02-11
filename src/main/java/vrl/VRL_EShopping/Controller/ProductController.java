@@ -11,6 +11,10 @@ import vrl.VRL_EShopping.Model.SearchRequest.SearchAboveDiscount;
 import vrl.VRL_EShopping.Model.SearchRequest.SearchAboveRating;
 import vrl.VRL_EShopping.Model.SearchRequest.SearchByCategory;
 import vrl.VRL_EShopping.Model.SearchRequest.SearchInPriceRange;
+import vrl.VRL_EShopping.Model.UpdateRequest.UpdateBoolean;
+import vrl.VRL_EShopping.Model.UpdateRequest.UpdateFloats;
+import vrl.VRL_EShopping.Model.UpdateRequest.UpdateMap;
+import vrl.VRL_EShopping.Model.UpdateRequest.UpdateString;
 import vrl.VRL_EShopping.Service.Interfaces.ProductService;
 
 import java.util.List;
@@ -31,6 +35,44 @@ public class ProductController {
     /*  ------------------------------------------------------------------------------------
      *     Products   Updation
      * ------------------------------------------------------------------------------------ */
+    @RequestMapping(value = "/UpdatePrice", method = RequestMethod.POST)
+    String UpdatePrice(@RequestBody UpdateFloats p1){
+        return ps.updatePrice(p1.getProdId(),p1.getData());
+    }
+
+    @RequestMapping(value = "/UpdateDiscount", method = RequestMethod.POST)
+    String UpdateDis(@RequestBody UpdateFloats p1){
+        return ps.updateDiscount(p1.getProdId(),p1.getData());
+    }
+
+    @RequestMapping(value = "/UpdateRating", method = RequestMethod.POST)
+    String UpdateRating(@RequestBody UpdateFloats p1){
+        return ps.updateAvgRating(p1.getProdId(),p1.getData());
+    }
+
+    @RequestMapping(value = "/UpdateOutOfStockStatus", method = RequestMethod.POST)
+    String UpdateOOSS(@RequestBody UpdateBoolean p1){
+        return ps.updateOrderStocks(p1.getProdId(),p1.isData());
+    }
+
+    @RequestMapping(value = "/UpdateImageURL", method = RequestMethod.POST)
+    String Updateimg(@RequestBody UpdateString p1){
+        return ps.updateImgUrl(p1.getProdId(),p1.getData());
+    }
+
+    @RequestMapping(value = "/UpdateCategory", method = RequestMethod.POST)
+    String UpdateCategory(@RequestBody UpdateString p1){
+        return ps.updateCategory(p1.getProdId(),p1.getData());
+    }
+
+    @RequestMapping(value = "/UpdateReviews", method = RequestMethod.POST)
+    String Updateimg(@RequestBody UpdateMap p1){
+        return ps.updateReviewPid(p1.getProdId(),p1.getData());
+    }
+
+
+
+
 
 
 
@@ -62,8 +104,12 @@ public class ProductController {
         return ps.searchProductByDiscount(discount.getDiscount());
     }
 
+    // get all the data
+    @RequestMapping(value = "/AllProducts")
+    List<ProductData> getAllProducts(){
+        return ps.getAllProductList();
+    }
 
 
-    
 
 }

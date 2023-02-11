@@ -7,14 +7,15 @@ import vrl.VRL_EShopping.Model.Products.UniqueProd;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 public interface ProductService {
     // Product
     ProductData addProduct(ProductData p1);
-    List<ProductData> addProducts(List<ProductData>prods);
 
 
-    // Product Fetching
-    List<ProductService> getAllProductList();
+    // Product Fetching and Searching
+    List<ProductData> getAllProductList();
     ProductData searchProductById(UniqueProd id);
     List<ProductData> searchProductPriceRange(double low,double high);
     List<ProductData> searchProductAboveRating(double rating);
@@ -23,14 +24,18 @@ public interface ProductService {
 
 
     // Update
-    void updatePrice(double price,int pid);
-    void updateDiscount(double discount,int pid);
-    void updateReviewPid(int pid, HashMap<Integer,String> userReview);
+    String updatePrice(UniqueProd p1,double price);
+    String updateDiscount(UniqueProd p1, double discount);
+    String updateReviewPid(UniqueProd p1, Map<String,String> userReview);
 
-    void updateAvgRating(int pid, double newRating);
+    String updateAvgRating(UniqueProd p1, double newRating);
 
     // Update the product status
-    void updateOrderStocks(int pid,boolean oos);
+    String updateOrderStocks(UniqueProd p1,boolean oos);
+
+    // Update Category
+    String updateCategory(UniqueProd p1,String Category);
+    String updateImgUrl(UniqueProd p1,String img);
 
 
 

@@ -1,4 +1,4 @@
-package vrl.VRL_EShopping.Model.SearchRequest;
+package vrl.VRL_EShopping.Model.Products.SearchRequest;
 
 import lombok.Data;
 

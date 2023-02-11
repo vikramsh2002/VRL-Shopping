@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import vrl.VRL_EShopping.Model.Products.ProductData;
 import vrl.VRL_EShopping.Model.Products.UniqueProd;
-import vrl.VRL_EShopping.Model.SearchRequest.SearchAboveDiscount;
-import vrl.VRL_EShopping.Model.SearchRequest.SearchAboveRating;
-import vrl.VRL_EShopping.Model.SearchRequest.SearchByCategory;
-import vrl.VRL_EShopping.Model.SearchRequest.SearchInPriceRange;
-import vrl.VRL_EShopping.Model.UpdateRequest.UpdateBoolean;
-import vrl.VRL_EShopping.Model.UpdateRequest.UpdateFloats;
-import vrl.VRL_EShopping.Model.UpdateRequest.UpdateMap;
-import vrl.VRL_EShopping.Model.UpdateRequest.UpdateString;
+import vrl.VRL_EShopping.Model.Products.SearchRequest.SearchAboveDiscount;
+import vrl.VRL_EShopping.Model.Products.SearchRequest.SearchAboveRating;
+import vrl.VRL_EShopping.Model.Products.SearchRequest.SearchByCategory;
+import vrl.VRL_EShopping.Model.Products.SearchRequest.SearchInPriceRange;
+import vrl.VRL_EShopping.Model.Products.UpdateRequest.UpdateBoolean;
+import vrl.VRL_EShopping.Model.Products.UpdateRequest.UpdateFloats;
+import vrl.VRL_EShopping.Model.Products.UpdateRequest.UpdateMap;
+import vrl.VRL_EShopping.Model.Products.UpdateRequest.UpdateString;
 import vrl.VRL_EShopping.Service.Interfaces.ProductService;
 
 import java.util.List;
@@ -71,9 +71,13 @@ public class ProductController {
     }
 
 
-
-
-
+//    /*  ------------------------------------------------------------------------------------
+//     *     Product   Deletion
+//     * ------------------------------------------------------------------------------------ */
+//      @RequestMapping(value = "/RemovePrductById",method = RequestMethod.POST)
+//      String removebyid(@RequestBody UniqueProd p1){
+//          return ps.deleteProductById(p1);
+//      }
 
 
     /*  ------------------------------------------------------------------------------------

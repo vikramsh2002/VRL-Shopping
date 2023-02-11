@@ -223,4 +223,24 @@ public class ProdService implements ProductService {
         }
 
     }
+
+
+
+//    /*  ------------------------------------------------------------------------------------
+//     *     Products   Deletion
+//     * ------------------------------------------------------------------------------------ */
+//    @Override
+//    public String deleteProductById(UniqueProd p1){
+//        try {
+//            prp1.deleteById(p1);
+//            return "Successfully Deleted..";
+//        }
+//        catch(Exception e)
+//        {
+//            return "Product Identifier Not Found";
+//        }
+//
+//    }
+
+
 }

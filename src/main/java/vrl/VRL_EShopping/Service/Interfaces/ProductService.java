@@ -37,6 +37,10 @@ public interface ProductService {
     String updateCategory(UniqueProd p1,String Category);
     String updateImgUrl(UniqueProd p1,String img);
 
+    // deleteing product
+    //    public String deleteProductById(UniqueProd p1); // ----> Since we can set product out of stock
+    // no need to delete
+
 
 
 }

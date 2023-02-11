@@ -14,6 +14,6 @@ public @Data class ProductData {
     private double averageRating;
     private String imgurl;
     private String category;
-    private double discount;
+    private double discount; // % of disc
     private boolean outOfStock;
 }

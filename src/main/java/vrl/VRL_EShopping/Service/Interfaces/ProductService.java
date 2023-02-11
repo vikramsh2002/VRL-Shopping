@@ -16,7 +16,11 @@ public interface ProductService {
     // Product Fetching
     List<ProductService> getAllProductList();
     ProductData searchProductById(UniqueProd id);
-    List<ProductService> searchProductByPrice(String productname, double price);
+    List<ProductData> searchProductPriceRange(double low,double high);
+    List<ProductData> searchProductAboveRating(double rating);
+    List<ProductData> searchProductByCategory(String category);
+    List<ProductData> searchProductByDiscount(double discount);
+
 
     // Update
     void updatePrice(double price,int pid);

@@ -2,18 +2,19 @@ package vrl.VRL_EShopping.Service.Interfaces;
 
 import vrl.VRL_EShopping.Model.Carts.Cart;
 import vrl.VRL_EShopping.Model.Carts.CartItem;
+import vrl.VRL_EShopping.Model.Products.UniqueProd;
 
 public interface CartService {
     // add+update+delete+fetch
 
     String addItemToCart(String username,CartItem c1);
 
-    void deleteItemFromCart(int cartId);
+    String deleteItemFromCart(String username, UniqueProd p1);
 
-    void EmptyCart(Cart c1);
+     String EmptyCart(String user);
 
-    void UpdateQuantity(Cart c1,int newQty, int cartItemid);
+    String UpdateQuantity(String user,int newQty, UniqueProd p1);
 
-    Cart getCartItems(Cart c1);
+    Cart getCartItems(String user);
 
 }
